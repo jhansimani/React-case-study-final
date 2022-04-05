@@ -1,0 +1,25 @@
+@import "../../App.scss";
+.footer {
+  @extend %vertical-centering;
+  color: $color-gray2;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 12px 144px;
+  background-color: $bg-color-light-gray;
+}
+
+@media (max-width: 58rem) {
+  .footer {
+    justify-content: center;
+  }
+}
+@media (max-width: 58rem) {
+  .footer {
+    padding: 12px 80px;
+  }
+}
+@media (max-width: 58rem) {
+  .footer {
+    padding: 12px;
+  }
+}

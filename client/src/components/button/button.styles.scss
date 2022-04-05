@@ -1,0 +1,42 @@
+@import "../../App.scss";
+
+button {
+  border: none;
+  padding: 10px 20px;
+  @extend %cursor-pointer;
+  @include border-radius(4px);
+
+  &.primary {
+    background: $color-pink;
+    color: $color-white;
+  }
+  &.primary-width-100 {
+    width: 100%;
+    background: $color-pink;
+    color: $color-white;
+  }
+  &.btn-slide {
+    z-index: 1;
+    padding: 10px; 
+    background: $color-black;
+    opacity: 0.45;
+    border: 1px solid rgba(34, 34, 34, 0.287);
+    @extend  %position-absolute;
+    @extend %centering;
+    @extend %cursor-pointer;
+    @include border-radius(0px);
+    text-transform: uppercase;
+    color: $color-white;
+    &.prev {
+      top: 50%;
+      left: 20px;
+      transform: translateY(-60%);
+    }
+    &.next {
+      opacity: 0.25;
+      top: 50%;
+      right: 20px;
+      transform: translateY(-60%);
+    }
+  }
+}

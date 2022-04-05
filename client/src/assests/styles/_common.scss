@@ -1,0 +1,44 @@
+%vertical-centering {
+  display: flex;
+  align-items: center;
+}
+%horizontal-centering {
+  display: flex;
+  justify-content: center;
+}
+%centering {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+%display-flex {
+  display: flex;
+}
+%justify-space-between {
+  justify-content: space-between;
+}
+%align-items-center {
+  align-items: center;
+}
+%align-items-end {
+  align-items: end;
+}
+
+%text-decoration-none {
+  text-decoration: none;
+}
+
+%text-align-center {
+  text-align: center;
+}
+
+// CUROR 
+%cursor-pointer {
+  cursor: pointer;
+}
+
+// position
+%position-absolute {
+  position: absolute;
+}

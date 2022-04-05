@@ -1,0 +1,55 @@
+
+
+
+@import "../../../App.scss";
+.mobile-categories-products {
+  .cat-nav-item {
+    padding: 12px 24px;
+    font-size: 16px;
+    color: #868e96;
+    border-bottom: 1px solid #bebeb0;
+    font-weight: 500;
+    cursor: pointer;
+    &.active {
+      background: $color-pink;
+      color: $color-white;
+    }
+    ion-icon[name="chevron-down-outline"] {
+      display: none;
+    }
+  }
+  .products-list-mobile {
+    display: none;
+  }
+}
+
+@media (max-width: 34rem) {
+  .mobile-categories-products {
+    .cat-nav-item {
+      background: $color-pink;
+      color: $color-white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 18px;
+      span {
+        color: $color-white;
+      }
+      ion-icon[name="chevron-down-outline"] {
+        color: $color-white;
+        display: block;
+        font-size: 18px;
+      }
+      &.active {
+        ion-icon[name="chevron-down-outline"] {
+          transform: rotate(180deg);
+        }
+      }
+    }
+    .products-list-mobile {
+      &.active {
+        display: block;
+      }
+    }
+  }
+}

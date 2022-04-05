@@ -1,0 +1,13 @@
+
+@import "../../../App.scss";
+.category-nav {
+  background-color: $bg-color-light-gray;
+  list-style: none;
+}
+@media (max-width: 34rem) {
+  .category-nav {
+    background-color: $background-white;
+    margin-top: 20px;
+    border-radius: 4px;
+  }
+}

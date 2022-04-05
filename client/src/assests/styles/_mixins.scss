@@ -1,0 +1,8 @@
+@mixin padding-top-bottom($topValue: 0px, $bottomValue: 0px) {
+  padding-top: $topValue;
+  padding-bottom: $bottomValue;
+}
+
+@mixin border-radius($radius: 0px) {
+  border-radius: $radius;
+}

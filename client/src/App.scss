@@ -1,0 +1,40 @@
+@import "assests/styles/varibles";
+@import "assests/styles/mixins";
+@import "assests/styles/common";
+.container {
+  padding-left: 144px;
+  padding-right: 144px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.main-body {
+  overflow: auto;
+  /* height: calc(100% - 96px); */
+  width: 100%;
+  position: relative;
+  position: absolute;
+  top: 96px;
+  bottom: 0;
+}
+
+@media (max-width: 64rem) {
+  
+  .main-body {
+    .container {
+      padding-left: 80px;
+      padding-right: 80px;
+    }
+  }
+}
+
+@media (max-width: 58rem) {
+  .main-body {
+    .container {
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+  }
+}
+
+
+

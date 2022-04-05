@@ -1,0 +1,190 @@
+@import "../../App.scss";
+.header {
+  height: 96px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  font-size: 16px;
+  @extend %display-flex;
+  @extend %justify-space-between;
+  background-color: $background-white;
+  @include padding-top-bottom(5px, 5px);
+  // box-shadow: 0 1px 9px 2px rgb(0 0 0 / 16%);
+  box-shadow: 0px 1px 5px #eeeedd;
+  // box-shadow: 0px 1px 5px #eeeedd, 0px 2px 10px #eeeedd, 0px 3px 20px #eeeedd;
+  .navigation-left-container {
+    @extend %display-flex;
+    .logo-container {
+      .desktop-site-logo {
+        height: 100%;
+      }
+    }
+    .nav-left-links {
+      @extend %display-flex;
+      @extend %align-items-end;
+      margin-left: 96px;
+      gap: 24px;
+      padding-bottom: 18px;
+
+      .nav-link {
+        font-size: 18px;
+        color: $color-gray1;
+        @extend %text-decoration-none;
+        font-weight: $font-weight-700;
+      }
+    }
+  }
+  .navigation-right-container {
+    margin-left: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    .nav-right-links {
+      gap: 12px;
+      width: 80%;
+      grid-column: 2/-1;
+      display: inline-flex;
+      .nav-link {
+        @extend %text-decoration-none;
+        font-size: 18px;
+        color: $color-gray2;
+        font-weight: $font-weight-600;
+        letter-spacing: -0.5px;
+        &:visited,
+        &:active {
+          color: $color-gray2;
+        }
+      }
+    }
+    .order-button {
+      grid-column: 1/-1;
+      grid-row: 2;
+      border: none;
+      padding: 12px 24px 12px 12px;
+      gap: 5px;
+      margin-top: auto;
+      @extend %centering;
+      margin-bottom: -5px;
+      background-color: $bg-color-light-gray;
+      span {
+        font-weight: $font-weight-500;
+        font-size: 16px;
+        color: $color-gray2;
+        font-family: "Dosis", sans-serif;
+        font-weight: $font-weight-600;
+      }
+      .cart-image {
+        fill: $color-pink;
+        height: 36px;
+        width: 36px;
+      }
+      .item-count {
+        width: 10px;
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
+}
+@media (max-width: 84rem) {
+  .header {
+    max-width: 1344px;
+  }
+}
+@media (max-width: 78rem) {
+  .header {
+    padding-left: 96px;
+    padding-right: 96px;
+    .navigation-left-container {
+      .nav-left-links {
+        margin-left: 48px;
+      }
+    }
+  }
+}
+
+@media (max-width: 64rem) {
+  nav.container {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+  .header {
+    .navigation-left-container {
+      .nav-left-links {
+        margin-left: 36px;
+      }
+    }
+  }
+}
+@media (max-width: 58rem) {
+  nav.container {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .header {
+    padding-left: 80px;
+    padding-right: 80px;
+    .navigation-left-container {
+      .nav-left-links {
+        margin-left: 24px;
+      }
+    }
+  }
+}
+@media (max-width: 48rem) {
+  nav.container {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .header {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    .navigation-left-container {
+      .nav-left-links {
+        margin-left: 36px;
+      }
+    }
+    .navigation-right-container {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      .order-button {
+        margin-bottom: -12px;
+      }
+    }
+  }
+}
+
+@media (max-width: 34rem) {
+  .header {
+    height: 64px;
+    padding: 0;
+    .navigation-left-container {
+      .nav-left-links {
+        display: none;
+      }
+    }
+    .navigation-right-container {
+      .nav-right-links {
+        gap: 0;
+        
+        .nav-link {
+          display: none;
+        }
+        .menu {
+          ion-icon[name="menu"] {
+            font-size: 24px;
+            color: $color-pink;
+          }
+        }
+      }
+      .order-button {
+        margin-top: none;
+        margin-bottom: 0;
+        height: 64px;
+        .cart-image {
+          width: 18px;
+          height: 18px;
+        }
+      }
+    }
+  }
+}
